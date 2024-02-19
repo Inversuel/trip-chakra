@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
   const page = parseInt(page_p ?? "1") || 1,
     per_page = parseInt(per_page_p ?? "10") || 10;
 
-  const fileContents = await fs.readFile("db.json", "utf8");
+    const fileContents = await fs.readFile(process.cwd() + "/db.json", "utf8");
   const jsonParse = JSON.parse(fileContents);
 
   return NextResponse.json(paginator(jsonParse.trip, page, per_page));
