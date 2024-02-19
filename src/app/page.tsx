@@ -25,7 +25,7 @@ export default function Home() {
   }, [fetchNextPage, hasNextPage, inView]);
 
   return (
-    <Box bgColor="blackAlpha.100">
+    <Box bgColor="blackAlpha.100" position="relative">
       <Box>
         {isLoading ? (
           <Box w="100%" h="100dvh" display="grid" placeItems="center">
@@ -67,7 +67,7 @@ export default function Home() {
           </Flex>
         )}
       </Box>
-      <div ref={ref}></div>
+      <Box ref={ref} h={20} w="100%" bottom={400} position="absolute"></Box>
     </Box>
   );
 }
