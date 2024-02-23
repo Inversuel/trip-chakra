@@ -1,12 +1,11 @@
-import { promises as fs } from "fs";
 import { NextRequest, NextResponse } from "next/server";
 import dbjson from "../../../../db.json";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
 
-  let page_p = searchParams.get("_page");
-  let per_page_p = searchParams.get("_per_page");
+  const page_p = searchParams.get("_page");
+  const per_page_p = searchParams.get("_per_page");
 
   const page = parseInt(page_p ?? "1") || 1,
     per_page = parseInt(per_page_p ?? "10") || 10;

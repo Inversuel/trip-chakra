@@ -85,7 +85,7 @@ const Card = ({
             justifyContent="space-between"
             p="3"
             borderRadius="xl"
-            mb="10"
+            mb="16"
           >
             <Text color="white">Emission offset:</Text>
             <Text color="white">
@@ -97,8 +97,10 @@ const Card = ({
       <Flex
         justifyContent="space-between"
         borderTopRadius="xl"
+        alignItems="center"
         p={3}
         bgColor="white"
+        h={16}
         zIndex={2}
         mx={10}
         position="absolute"

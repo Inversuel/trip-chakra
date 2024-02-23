@@ -1,4 +1,3 @@
-import { promises as fs } from "fs";
 import { NextRequest, NextResponse } from "next/server";
 import dbjson from "../../../../../db.json";
 
